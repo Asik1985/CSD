@@ -1,4 +1,5 @@
 ﻿using CSD.Web.Data;
+using CSD.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CSD.Web.Controllers
@@ -12,9 +13,12 @@ namespace CSD.Web.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        // GET: /Categories/Index
+        public ActionResult Index()
         {
-            return View();
+            IEnumerable<Category> categories = _db.Categories.ToList();
+            return View(categories);
         }
+
     }
 }
