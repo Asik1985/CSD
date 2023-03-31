@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSD.Web.Migrations
 {
     [DbContext(typeof(CSDContext))]
-    [Migration("20230331133943_Add Category and Post tables")]
+    [Migration("20230331144038_Add Category and Post tables")]
     partial class AddCategoryandPosttables
     {
         /// <inheritdoc />
